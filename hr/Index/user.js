@@ -15,11 +15,10 @@ $.ajax({
             detail_table += result[i]['group_user'];
             detail_table += "</td><td>";
             detail_table += result[i]['department_user'];
-            detail_table += "</td><td><disable button type='button' class='btn btn-primary disabled '>รอการอนุมัติ</button></td></tr>";
+            detail_table += "</td><td><button onclick='edit("+result[i]['id_user']+")' type='button' class='btn btn-primary'>รอการอนุมัติ</button></td></tr>";
         }
         detail_table += "</tbody>";
         $("#user").html(detail_table);
-        // $('#user').DataTable();
     }
 });
 function user(search) {
@@ -43,11 +42,10 @@ function user(search) {
                 detail_table += result[i]['group_user'];
                 detail_table += "</td><td>";
                 detail_table += result[i]['department_user'];
-                detail_table += "</td><td><disable button type='button' class='btn btn-primary disabled '>รอการอนุมัติ</button></td></tr>";
+                detail_table += "</td><td><button onclick='edit("+result[i]['id_user']+")' type='button' class='btn btn-primary'>รอการอนุมัติ</button></td></tr>";
             }
             detail_table += "</tbody>";
             $("#user").html(detail_table);
-            // $('#user').DataTable();
         }
     });
 }
