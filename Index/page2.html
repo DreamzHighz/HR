@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>การประเมิณและให้คะแนน</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900' rel='stylesheet'
+        type='text/css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Techie Bootstrap 3 skin">
+    <meta name="keywords" content="bootstrap 3, skin, flat">
+    <meta name="author" content="bootstraptaste">
+
+    <!-- Bootstrap css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.techie.css" rel="stylesheet">
+
+    <!-- =======================================================
+    Theme Name: Techie
+    Theme URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+
+    <!-- Docs Custom styles -->
+    <style>
+        body,
+        html {
+            overflow-x: hidden
+        }
+
+        body {
+            padding: 2% 4% 0;
+            color: black;
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 30px;
+            margin-top: 50px
+        }
+
+        .navbar-container {
+            position: relative;
+            min-height: 100px
+        }
+
+        .navbar.navbar-fixed-bottom,
+        .navbar.navbar-fixed-top {
+            position: absolute;
+            top: 50px;
+            z-index: 0
+        }
+
+        .navbar.navbar-fixed-bottom .container,
+        .navbar.navbar-fixed-top .container {
+            max-width: 90%
+        }
+
+        .btn-group {
+            margin-bottom: 10px
+        }
+
+        .form-inline input[type=password],
+        .form-inline input[type=text],
+        .form-inline select {
+            width: 180px
+        }
+
+        .input-group {
+            margin-bottom: 10px
+        }
+
+        .pagination {
+            margin-top: 0
+        }
+
+        .navbar-inverse {
+            margin: 110px 0
+        }
+
+        table {
+            background-color: white;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+        }
+    </style>
+
+    <!-- Main Scripts-->
+    <script src="../Index/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/page2.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap 3 has typeahead optionally -->
+    <script src="../assets/js/typeahead.min.js"></script>
+
+</head>
+
+<body>
+    <!--ส่วนที่1******************************-->
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>ส่วนที่ 1.การปฏิบัติงานตามภาระงาน</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 5%"> </th>
+                        <th style="width: 35%"> </th>
+                        <th style="width: 15%"> </th>
+                        <th style="width: 6%">1</th>
+                        <th style="width: 6%">2</th>
+                        <th style="width: 6%">3</th>
+                        <th style="width: 6%">4</th>
+                        <th style="width: 6%">5</th>
+                        <th style="width: 15%"> </th>
+                    </tr>
+                    <tr>
+                        <th style="width: 5%">ลำดับ</th>
+                        <th style="width: 35%">ภาระงาน</th>
+                        <th style="width: 15%">สัดส่วนปริมาณงาน</th>
+                        <th colspan="5" style="width: 30%">ระดับคะแนนคุณภาพงาน</th>
+                        <th style="width: 15%">คะแนน(เต็ม500)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td> * งานหลัก (70%) (งานที่ได้รับมอบหมายให้เป็นภาระหน้าที่ ความรับผิดชอบโดยตรงของพนักงานนั้น ๆ
+                            เป็นรายบุคคล)</td>
+                        <td>70</td>
+                        <td><input type="radio" name="options70" id="option70_1"></td>
+                        <td><input type="radio" name="options70" id="option70_2"></td>
+                        <td><input type="radio" name="options70" id="option70_3"></td>
+                        <td><input type="radio" name="options70" id="option70_4"></td>
+                        <td><input type="radio" name="options70" id="option70_5"></td>
+                        <td><input type="text" id="point70" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td> * งานรอง (20%) (งานที่ได้รับมอบหมายให้เป็นภาระหน้าที่ นอกเหนือจากงานหลัก
+                            โดยได้รับมอบหมายจากผู้บังคับบัญชาหรือมหาวิทยาลัย)</td>
+                        <td>20</td>
+                        <td><input type="radio" name="options20" id="option20_1"></td>
+                        <td><input type="radio" name="options20" id="option20_2"></td>
+                        <td><input type="radio" name="options20" id="option20_3"></td>
+                        <td><input type="radio" name="options20" id="option20_4"></td>
+                        <td><input type="radio" name="options20" id="option20_5"></td>
+                        <td><input type="text" id="point20" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>การมีส่วนร่วมในกิจกรรมของมหาวิทยาลัย (10%)</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options10" id="option10_1"></td>
+                        <td><input type="radio" name="options10" id="option10_2"></td>
+                        <td><input type="radio" name="options10" id="option10_3"></td>
+                        <td><input type="radio" name="options10" id="option10_4"></td>
+                        <td><input type="radio" name="options10" id="option10_5"></td>
+                        <td><input type="text" id="point10" disabled></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">คะแนนรวม(เต็ม500)</td>
+                        <td><input type="text" id="totalPoint1" disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--ส่วนที่2****************************-->
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>ส่วนที่ 2.ความรู้ความสามารถในการปฏิบัติงานและพฤติกรรม</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 5%"> </th>
+                        <th style="width: 40%"> </th>
+                        <th style="width: 10%"> </th>
+                        <th style="width: 6%">1</th>
+                        <th style="width: 6%">2</th>
+                        <th style="width: 6%">3</th>
+                        <th style="width: 6%">4</th>
+                        <th style="width: 6%">5</th>
+                        <th style="width: 15%"></th>
+                    </tr>
+                    <tr>
+                        <th style="width: 5%">ลำดับ</th>
+                        <th style="width: 35%">องค์ประกอบ</th>
+                        <th style="width: 15%">ค่าน้ำหนัก(คะแนน)</th>
+                        <th colspan="5" style="width: 30%">ระดับคะแนนของการปฏิบัติงาน</th>
+                        <th style="width: 15%">คะแนนรวม</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>ความสามารถในการปฏิบัติงานให้บรรลุหรือมากกว่าเป้าหมายตามภาระงานที่ได้รับมอบหมาย</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options1" id="option1_1"></td>
+                        <td><input type="radio" name="options1" id="option1_2"></td>
+                        <td><input type="radio" name="options1" id="option1_3"></td>
+                        <td><input type="radio" name="options1" id="option1_4"></td>
+                        <td><input type="radio" name="options1" id="option1_5"></td>
+                        <td><input type="text" id="point1" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>ความเอาใจใส่ในการปฏิบัติงานด้วยความถูกต้อง แม่นยำ ประณีต เรียบร้อย</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options2" id="option2_1"></td>
+                        <td><input type="radio" name="options2" id="option2_2"></td>
+                        <td><input type="radio" name="options2" id="option2_3"></td>
+                        <td><input type="radio" name="options2" id="option2_4"></td>
+                        <td><input type="radio" name="options2" id="option2_5"></td>
+                        <td><input type="text" id="point2" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>การพัฒนาตนอย่างต่อเนื่องโดยการนำแนวความคิดหรือแนวปฏิบัติใหม่ๆมาใช้อย่างเป็นระบบเพื่อให้เกิดประโยชน์ต่อมหาวิทยาลัย
+                        </td>
+                        <td>10</td>
+                        <td><input type="radio" name="options3" id="option3_1"></td>
+                        <td><input type="radio" name="options3" id="option3_2"></td>
+                        <td><input type="radio" name="options3" id="option3_3"></td>
+                        <td><input type="radio" name="options3" id="option3_4"></td>
+                        <td><input type="radio" name="options3" id="option3_5"></td>
+                        <td><input type="text" id="point3" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>มีความรู้ความเข้าใจ และความเชี่ยวชาญในภาระงานที่รับผิดชอบ</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options4" id="option4_1"></td>
+                        <td><input type="radio" name="options4" id="option4_2"></td>
+                        <td><input type="radio" name="options4" id="option4_3"></td>
+                        <td><input type="radio" name="options4" id="option4_4"></td>
+                        <td><input type="radio" name="options4" id="option4_5"></td>
+                        <td><input type="text" id="point4" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>ปฏิบัติงานตามคำแนะนำของผู้บังคับบัญชาด้วยความรับผิดชอบ</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options5" id="option5_1"></td>
+                        <td><input type="radio" name="options5" id="option5_2"></td>
+                        <td><input type="radio" name="options5" id="option5_3"></td>
+                        <td><input type="radio" name="options5" id="option5_4"></td>
+                        <td><input type="radio" name="options5" id="option5_5"></td>
+                        <td><input type="text" id="point5" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>สามารถปฏิบัติงานเป็นทีมร่วมกับผู้อื่น</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options6" id="option6_1"></td>
+                        <td><input type="radio" name="options6" id="option6_2"></td>
+                        <td><input type="radio" name="options6" id="option6_3"></td>
+                        <td><input type="radio" name="options6" id="option6_4"></td>
+                        <td><input type="radio" name="options6" id="option6_5"></td>
+                        <td><input type="text" id="point6" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>อุทิศตนให้กับงานโดยไม่ย่อท้อ สม่ำเสมอ ด้วยความอุตสาหะ วิริยะ</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options7" id="option7_1"></td>
+                        <td><input type="radio" name="options7" id="option7_2"></td>
+                        <td><input type="radio" name="options7" id="option7_3"></td>
+                        <td><input type="radio" name="options7" id="option7_4"></td>
+                        <td><input type="radio" name="options7" id="option7_5"></td>
+                        <td><input type="text" id="point7" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>ความซื่อสัตย์ต่อองค์กร เสริมสร้างให้ตนและหน่วยงานมีชื่อเสียง</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options8" id="option8_1"></td>
+                        <td><input type="radio" name="options8" id="option8_2"></td>
+                        <td><input type="radio" name="options8" id="option8_3"></td>
+                        <td><input type="radio" name="options8" id="option8_4"></td>
+                        <td><input type="radio" name="options8" id="option8_5"></td>
+                        <td><input type="text" id="point8" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>ประพฤติตนอยู่ในกรอบของศีลธรรมอันดีงาม มีจรรยาบรรณวิชาชีพอย่างเสมอต้นเสมอปลาย</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options9" id="option9_1"></td>
+                        <td><input type="radio" name="options9" id="option9_2"></td>
+                        <td><input type="radio" name="options9" id="option9_3"></td>
+                        <td><input type="radio" name="options9" id="option9_4"></td>
+                        <td><input type="radio" name="options9" id="option9_5"></td>
+                        <td><input type="text" id="point9" disabled></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>สามารถแก้ปัญหาและมีการตัดสินใจอย่างรอบคอบ รวดเร็ว</td>
+                        <td>10</td>
+                        <td><input type="radio" name="options0" id="option0_1"></td>
+                        <td><input type="radio" name="options0" id="option0_2"></td>
+                        <td><input type="radio" name="options0" id="option0_3"></td>
+                        <td><input type="radio" name="options0" id="option0_4"></td>
+                        <td><input type="radio" name="options0" id="option0_5"></td>
+                        <td><input type="text" id="point0" disabled></td>
+                    </tr>
+                    <tr>
+                        <td colspan="8">คะแนนรวม(เต็ม500)</td>
+                        <td><input type="text" id="totalPoint2" disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">คิดสัดส่วนคะแนนการปฏิบัติงานตามภาระงานเป็น 50 คะแนน</div>
+                <div class="row">โดยใช้ คะแนนรวม ÷ 10</div>
+                <div class="row">ผู้รับการประเมินได้ <input type="text" id="finalPoint1" disabled> คะแนน</div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">คิดสัดส่วนคะแนนความรู้ความสามารถในการปฏิบัติงานและพฤติกรรมเป็น 50 คะแนน</div>
+                <div class="row">โดยใช้ คะแนนรวม ÷ 10</div>
+                <div class="row">ผู้รับการประเมินได้ <input type="text" id="finalPoint2" disabled> คะแนน</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
