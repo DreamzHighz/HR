@@ -3,336 +3,338 @@
 
 <head>
 
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-  <title>ข้อมูลพนักงาน</title>
+    <title>ข้อมูลพนักงาน</title>
 
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900' rel='stylesheet' type='text/css'>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Techie Bootstrap 3 skin">
-  <meta name="keywords" content="bootstrap 3, skin, flat">
-  <meta name="author" content="bootstraptaste">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Techie Bootstrap 3 skin">
+    <meta name="keywords" content="bootstrap 3, skin, flat">
+    <meta name="author" content="bootstraptaste">
 
-  <!-- Bootstrap css -->
-  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/css/bootstrap.techie.css" rel="stylesheet">
+    <!-- Bootstrap css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.techie.css" rel="stylesheet">
 
-  <!-- =======================================================
+    <!-- =======================================================
     Theme Name: Techie
     Theme URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
 
-  <!-- Docs Custom styles -->
-  <style>
-    body,
-    html {
-      overflow-x: hidden
-    }
+    <!-- Docs Custom styles -->
+    <style>
+        body,
+        html {
+            overflow-x: hidden
+        }
+        
+        body {
+            padding: 2% 4% 0;
+            color: black;
+        }
+        
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 30px;
+            margin-top: 50px
+        }
+        
+        .navbar-container {
+            position: relative;
+            min-height: 100px
+        }
+        
+        .navbar.navbar-fixed-bottom,
+        .navbar.navbar-fixed-top {
+            position: absolute;
+            top: 50px;
+            z-index: 0
+        }
+        
+        .navbar.navbar-fixed-bottom .container,
+        .navbar.navbar-fixed-top .container {
+            max-width: 90%
+        }
+        
+        .btn-group {
+            margin-bottom: 10px
+        }
+        
+        .form-inline input[type=password],
+        .form-inline input[type=text],
+        .form-inline select {
+            width: 180px
+        }
+        
+        .input-group {
+            margin-bottom: 10px
+        }
+        
+        .pagination {
+            margin-top: 0
+        }
+        
+        .navbar-inverse {
+            margin: 110px 0
+        }
+        
+        table {
+            text-align: center;
+            width: 80%;
+        }
+        
+        th {
+            text-align: center;
+        }
+    </style>
 
-    body {
-      padding: 2% 4% 0;
-      color: black;
-    }
+    <!-- Main Scripts-->
+    <script src="../Index/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/page1.js"></script>
+    <!-- <script src="../assets/js/page1_save.js"></script> -->
+    <script src="../assets/js/bootstrap.min.js"></script>
 
-    footer {
-      border-top: 1px solid #ddd;
-      padding: 30px;
-      margin-top: 50px
-    }
-
-    .navbar-container {
-      position: relative;
-      min-height: 100px
-    }
-
-    .navbar.navbar-fixed-bottom,
-    .navbar.navbar-fixed-top {
-      position: absolute;
-      top: 50px;
-      z-index: 0
-    }
-
-    .navbar.navbar-fixed-bottom .container,
-    .navbar.navbar-fixed-top .container {
-      max-width: 90%
-    }
-
-    .btn-group {
-      margin-bottom: 10px
-    }
-
-    .form-inline input[type=password],
-    .form-inline input[type=text],
-    .form-inline select {
-      width: 180px
-    }
-
-    .input-group {
-      margin-bottom: 10px
-    }
-
-    .pagination {
-      margin-top: 0
-    }
-
-    .navbar-inverse {
-      margin: 110px 0
-    }
-
-    table{
-      text-align: center;
-      width: 80%;
-    }
-
-    th{
-      text-align: center;
-    }
-  </style>
-
-  <!-- Main Scripts-->
-  <script src="../Index/jquery-3.2.1.min.js"></script>
-  <script src="../assets/js/page1.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
-
-  <!-- Bootstrap 3 has typeahead optionally -->
-  <script src="../assets/js/typeahead.min.js"></script>
+    <!-- Bootstrap 3 has typeahead optionally -->
+    <script src="../assets/js/typeahead.min.js"></script>
 
 </head>
 
 <body>
-  <h2 style="font-size:180%">การประเมินผลการปฏิบัติงานประจำปี</h2>
-  <div class="row">
-    <div class="col-sm-12">
-      <p class="lead text-muted">ข้อมูลพนักงาน</p>
-    </div>
-
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label class="control-label">ชื่อ - นามสกุล</label>
-        <input type="text" class="form-control" id="fullName">
-      </div>
-      <div class="form-group">
-        <label class="control-label">หน่วยงาน</label>
-        <input type="text" class="form-control" id="department">
-      </div>
-      <div class="form-group">
-        <label class="control-label">วันบรรจุ</label>
-        <input type="text" class="form-control" id="startDate">
-      </div>
-    </div>
-
-    <div class="col-sm-6">
-      <div class="form-group">
-        <label class="control-label">ตำแหน่ง</label>
-        <input type="text" class="form-control" id="position">
-      </div>
-      <div class="form-group">
-        <label class="control-label">ฝ่าย</label>
-        <input type="text" class="form-control" id="group">
-      </div>
-      <div class="form-group">
-        <label class="control-label">สังกัด</label>
-        <input type="text" value="โรงพยาบาลศูนย์การแพทย์มหาวิทยาลัยแม่ฟ้าหลวง" class="form-control" id="under">
-      </div>
-    </div>
-
-    <div class="col-sm-12">
-      <div class="row">
-        <div class="col-sm-6">
-          <label class="control-label">รวมระยะเวลาปฎิบัติงาน</label>
-        </div>
-        <div class="col-sm-6">
-          <label class="control-label">วันสุดท้ายที่ทำงาน</label>
-        </div>
-      </div>
-      <div class="row">
+    <h2 style="font-size:180%">การประเมินผลการปฏิบัติงานประจำปี</h2>
+    <div class="row">
         <div class="col-sm-12">
-          <div class="col-sm-2">
-            <input type="number" class="form-control" id="year" placeholder="ปี" min="0" max="99">
-          </div>
-          <div class="col-sm-2">
-            <input type="number" class="form-control" id="month" placeholder="เดือน" min="0" max="12">
-          </div>
-          <div class="col-sm-2">
-            <input type="number" class="form-control" id="day" placeholder="วัน" min="0" max="31">
-          </div>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" id="lastDay">
-          </div>
+            <p class="lead text-muted">ข้อมูลพนักงาน</p>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="row" style="margin-top: 25px;">
-    <div class="col-sm-6">
-      <div class="row">
-        <p class="lead text-muted">ประเภทการประเมินผลการปฏิบัติงาน</p>
-      </div>
-      <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">ชื่อ - นามสกุล</label>
+                <input type="text" class="form-control" id="fullName">
+            </div>
+            <div class="form-group">
+                <label class="control-label">หน่วยงาน</label>
+                <input type="text" class="form-control" id="department">
+            </div>
+            <div class="form-group">
+                <label class="control-label">วันบรรจุ</label>
+                <input type="text" class="form-control" id="startDate">
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label">ตำแหน่ง</label>
+                <input type="text" class="form-control" id="position">
+            </div>
+            <div class="form-group">
+                <label class="control-label">ฝ่าย</label>
+                <input type="text" class="form-control" id="group">
+            </div>
+            <div class="form-group">
+                <label class="control-label">สังกัด</label>
+                <input type="text" value="โรงพยาบาลศูนย์การแพทย์มหาวิทยาลัยแม่ฟ้าหลวง" class="form-control" id="under">
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label class="control-label">รวมระยะเวลาปฎิบัติงาน</label>
+                </div>
+                <div class="col-sm-6">
+                    <label class="control-label">วันสุดท้ายที่ทำงาน</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-2">
+                        <label> ปี </label>
+                        <input type="number" class="form-control" id="year" placeholder="ปี" min="0" max="99" disabled>
+                    </div>
+                    <div class="col-sm-2">
+                        <label> เดือน </label>
+                        <input type="number" class="form-control" id="month" placeholder="เดือน" min="0" max="12" disabled>
+                    </div>
+                    <div class="col-sm-2">
+                        <label> วัน </label>
+                        <input type="number" class="form-control" id="day" placeholder="วัน" min="0" max="31" disabled>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="enddate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-sm-6">
+            <div class="row">
+                <p class="lead text-muted">ประเภทการประเมินผลการปฏิบัติงาน</p>
+            </div>
+            <!-- <div class="form-control">
         <div class="col-sm-1">
           <input type="checkbox" id="box1">
         </div>
-        <div class="col-sm-11">
+        <div class="col-sm-5">
           <label style="text-align: left;">ทดลองปฏิบัติงาน</label>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-1">
-          <input type="checkbox" id="box2">
-        </div>
-        <div class="col-sm-6">
-          <label style="text-align: left;">การประเมินผลการปฏิบัติงานประจำปี ครั้งที่</label>
-        </div>
-        <div class="col-sm-2" style="margin: 0;padding:0;">
-          <input type="number" class="form-control" id="noOftimes">
-        </div>
-        <div class="col-sm-1" style="margin: 0;padding:0;text-align: center;">
-          <label>/</label>
-        </div>
-        <div class="col-sm-2">
-          <input type="number" class="form-control" id="years">
-        </div>
-      </div>
-      <div class="row">
+      </div> -->
+            <div class="form-control">
+                <div class="col-sm-1">
+                    <input type="checkbox" id="box2">
+                </div>
+                <div class="col-sm-5">
+                    <label style="text-align: left;">การประเมินผลการปฏิบัติงานประจำปี ครั้งที่  </label>
+                </div>
+                <div>
+                    <input style="text-align: center" type="text" id="noOftimes" min="1" max="3">
+                    <label>/</label>
+                    <input style="text-align: center" type="text" id="years" min="2562">
+                </div>
+            </div>
+            <!-- <div class="form-control">
         <div class="col-sm-1">
           <input type="checkbox" id="box3">
         </div>
-        <div class="col-sm-11">
+        <div class="col-sm-5">
           <label style="text-align: left;">พิจารณาต่อสัญญาจ้าง</label>
-        </div>
+        </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
       </div>
-      <div class="row">
+      <div class="form-control">
         <div class="col-sm-1">
           <input type="checkbox" id="box4">
         </div>
-        <div class="col-sm-11">
+        <div class="col-sm-5">
           <label style="text-align: left;">ลูกจ้างชั่วคราวรายเดือน</label>
         </div>
-      </div>
-      <div class="row" style="margin-top: 50px">
-        <div class="col-sm-12">
-            <p class="lead text-muted">ข้อมูลการลาของพนักงาน</p>
+      </div> -->
+            <div class="row" style="margin-top: 50px">
+                <div class="col-sm-12">
+                    <p class="lead text-muted">ข้อมูลการลาของพนักงาน</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table style="width:100%" class="table-bordered">
+                        <tr>
+                            <th>ประเภทการลา</th>
+                            <th>จำนวนวัน</th>
+                            <th>จำนวนครั้ง</th>
+                        </tr>
+                        <tr>
+                            <td>ลาป่วย</td>
+                            <td><input type="number" id="day_sickleave"></td>
+                            <td><input type="number" id="per_sickleave"></td>
+                        </tr>
+                        <tr>
+                            <td>ลากิจ</td>
+                            <td><input type="number" id="day_leave"></td>
+                            <td><input type="number" id="per_leave"></td>
+                        </tr>
+                        <tr>
+                            <td>พักผ่อน</td>
+                            <td><input type="number" id="day_restleave"></td>
+                            <td><input type="number" id="per_restleave"></td>
+                        </tr>
+                        <tr>
+                            <td>สาย</td>
+                            <td><input type="number" id="day_late"></td>
+                            <td><input type="number" id="per_late"></td>
+                        </tr>
+                        <tr>
+                            <td>ขาดงาน</td>
+                            <td><input type="number" id="day_absence"></td>
+                            <td><input type="number" id="per_absence"></td>
+                        </tr>
+                        <tr>
+                            <td>ลาอื่นๆ </td>
+                            <td colspan="2"><input type="text" id="other_leave" placeholder="โปรดระบุ" style="width: 90%"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-            <table style="width:100%" class="table-bordered">
-                <tr>
-                  <th>ประเภทการลา</th>
-                  <th>จำนวนวัน</th>
-                  <th>จำนวนครั้ง</th>
-                </tr>
-                <tr>
-                  <td>ป่วย</td>
-                  <td><input type="number" id=""></td> 
-                  <td><input type="number" id=""></td>
-                </tr>
-                <tr>
-                  <td>กิจ</td>
-                  <td><input type="number" id=""></td> 
-                  <td><input type="number" id=""></td>
-                </tr>
-                <tr>
-                  <td>พักผ่อน</td>
-                  <td><input type="number" id=""></td> 
-                  <td><input type="number" id=""></td>
-                </tr>
-                <tr>
-                  <td>สาย</td>
-                  <td><input type="number" id=""></td> 
-                  <td><input type="number" id=""></td>
-                </tr>
-                <tr>
-                  <td>ขาดงาน</td>
-                  <td><input type="number" id=""></td> 
-                  <td><input type="number" id=""></td>
-                </tr>
-                <tr>
-                  <td>ลาอื่นๆ </td>
-                  <td colspan="2"><input type="text" id="" placeholder="โปรดระบุ" style="width: 90%"></td> 
-                </tr>
-              </table>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-sm-6" style="padding-left: 20px">
-      <div class="row">
-        <p class="lead text-muted">ข้อมูลการประเมิน</p>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <label style="text-align: left;">ผลการประเมินครั้งที่ผ่านมา</label>
-        </div>
-        <div class="col-sm-2">
-          <input type="number" class="form-control" id="lastPoint">
-        </div>
-        <div class="col-sm-6">
-          <label style="text-align: left;">คะแนน</label>
-        </div>
-      </div>
-      <div class="row">
-        <p class="lead text-muted">คณะกรรมการประเมินผล</p>
-      </div>
-      <div class="row" style="margin-left: 10px">
-        <div class="row">
-            <div class="col-sm-4">
-                <label>1.ผู้อำนวยการโรงพยาบาล</label>
+        <div class="col-sm-6" style="padding-left: 20px">
+            <div class="row">
+                <p class="lead text-muted">ข้อมูลการประเมิน</p>
             </div>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="name1">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label style="text-align: left;">ผลการประเมินครั้งที่ผ่านมา</label>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="lastscore" min="0" max="100">
+                </div>
+                <div class="col-sm-6">
+                    <label style="text-align: left;">คะแนน</label>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <label>2.หัวหน้าฝ่าย</label>
+            <div class="row">
+                <p class="lead text-muted">คณะกรรมการประเมินผล</p>
             </div>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="name2">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <label>3.หัวหน้างาน</label>
-            </div>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="name3">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <label>4.ผู้แทนจากหน่วยงานอื่นๆ</label>
-            </div>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="name4">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <label>5.หัวหน้างานทรัพยากรบุคคล</label>
-            </div>
-            <div class="col-sm-8">
-                <input type="text" class="form-control" id="name5">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2">
-                <label>หมายเหตุ</label>
-            </div>
-            <div class="col-sm-10">
-                <textarea style="width: 100%"></textarea>
-            </div>
-        </div>
-        
-      </div>
+            <div class="row" style="margin-left: 10px">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>1.ผู้อำนวยการโรงพยาบาล</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="committee1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>2.หัวหน้าฝ่าย</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="committee2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>3.หัวหน้างาน</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="committee3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>4.ผู้แทนจากหน่วยงานอื่นๆ</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="committee4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>5.หัวหน้างานทรัพยากรบุคคล</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="committee5">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label>หมายเหตุ</label>
+                    </div>
+                    <div class="col-sm-10">
+                        <textarea style="width: 100%" id="remark"></textarea>
+                    </div>
+                </div>
 
+            </div>
+            <br><br>
+            <button style="float: right" type="button" class="btn btn-primary" onclick="page1_save()">หน้าถัดไป</button>
+        </div>
     </div>
-  </div>
-  <footer style="padding: 10px"></footer>
+    <footer style="padding: 10px"></footer>
 
 </body>
 

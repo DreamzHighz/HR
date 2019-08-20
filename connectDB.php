@@ -1,6 +1,6 @@
 <?php
 
-$servername = "172.16.68.3";
+$servername = "172.16.17.1";
 $username = "hradmin";
 $password = "hradmin1234";
 $dbname = "hr";
@@ -11,5 +11,5 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-mysqli_set_charset($conn,"utf8");
+mysqli_set_charset($conn,"tis620");
 ?>

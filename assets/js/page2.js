@@ -1,3 +1,20 @@
+$(document).ready(function () {
+    var id = sessionStorage.getItem("userId");
+
+    $.ajax({
+        method: "POST",
+        url: "../assets/php/page2.php",
+        data: { userId: id },
+        success: function (result) {
+            var result = JSON.parse(result);
+
+            $("#finalPoint1").val(result[0]['score1_user']);
+            $("#finalPoint2").val(result[0]['score2_user']);
+           
+        }
+    });
+});
+
 
 var total1 = 0;
 var total2 = 0;
@@ -341,4 +358,22 @@ function calcurator(){
     $("#point0").val(lastPoint0*10);
     $("#totalPoint2").val(total2);
     $("#finalPoint2").val(total2/10);
+}
+
+function page2_save(){
+    var id = sessionStorage.getItem("userId");
+    var finalPoint1 = $("#finalPoint1").val();
+    var finalPoint2 = $("#finalPoint2").val();
+    var finalPoint3 = parseInt(finalPoint1) + parseInt(finalPoint2)
+
+    $.ajax({
+        method: "POST",
+        url: "../assets/php/page2_save.php",
+        data: { finalPoint1: finalPoint1, finalPoint2:  finalPoint2, finalPoint3: finalPoint3, userId: id },
+                success:function(strSQL){
+                   
+                }
+               
+        });
+        window.location.href = "../../hr/Index/page3.html"
 }

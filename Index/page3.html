@@ -95,7 +95,7 @@
     </style>
 
     <!-- Main Scripts-->
-    <script src="../Index/jquery-3.2.1.min.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
     <script src="../assets/js/page3.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
 
@@ -112,7 +112,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <h4>ผู้รับการประเมินได้ <input type="text" id="point" disabled> คะแนน</h4>
+            <h4>ผู้รับการประเมินได้ <input style="text-align: center" type="text" id="point" disabled> คะแนน</h4>
         </div>
     </div>
     <div class="row">
@@ -122,7 +122,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12" style="text-align: center;">
-            <label id="pointText">ดี (75-84 คะแนน)</label>
+            <label id="pointText"></label>
         </div>
     </div>
     <div class="row">
@@ -168,9 +168,10 @@
                     </tr>
                 </tbody>
             </table>
+            <button style="float: right" type="button" class="btn btn-success" onclick="page3_save()">บันทึก</button>
         </div>
     </div>
-
+   
 </body>
 
 </html>
